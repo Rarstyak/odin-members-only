@@ -47,5 +47,4 @@ rails g model Post title:string body:text user:references
 ```
 
 ToDo
-
 - [ ] for turbo drive install responders gem
