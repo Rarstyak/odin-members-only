@@ -34,16 +34,25 @@ Devise modules set to default
 
 ```
 bundle add devise
-```
-
-```
 rails g devise User username:string email:string password:string
+-> has_many posts
 
-has_many posts
+rails g devise:views users
+-> requires config/initializers/devise.rb to have "config.scoped_views = true"
 ```
 
 ```
 rails g model Post title:string body:text user:references
+```
+
+```
+rails g controller Posts new create index
+rails g controller Users new create
+```
+
+```
+rails server
+kill -9 [PID]
 ```
 
 ToDo

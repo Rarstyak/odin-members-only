@@ -1,0 +1,13 @@
+<h1>Posts#new</h1>
+<p>Find me in app/views/posts/new.html.erb</p>
+
+<%= form_with model: @post do |form| %>
+  <%= form.label :title, "Title:" %>
+  <%= form.text_field :title %>
+  <br>
+  <%= form.label :body, "Body:" %>
+  <%= form.text_field :body %>
+  <br>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+  <%= form.submit "Create" %>
+<% end %>
